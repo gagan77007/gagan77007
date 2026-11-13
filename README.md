@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&include_all_commits=true&theme=tokyonight" alt="GitHub Stats" />
+  <img src="assets/profile-hero.svg" width="100%" alt="Gagan A Reddy - GitHub Profile" />
 </p>
 
 <p align="center">
@@ -10,6 +10,8 @@
 
 <p align="center">
   <a href="https://github.com/gagan77007">GitHub</a>
+  ·
+  <a href="https://github.com/gagan77007?tab=repositories">Projects</a>
 </p>
 
 <details open>
@@ -17,12 +19,8 @@
 <br/>
 
 <p align="center">
-  <a href="https://github.com/gagan77007/shopdirect-ordering-app">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gagan77007&repo=shopdirect-ordering-app&theme=tokyonight" alt="ShopDirect project" />
-  </a>
+  <img src="assets/profile-projects.svg" width="100%" alt="Featured projects" />
 </p>
-
-- [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) · Complete mobile-first single-shop ordering and store management web app built with React, HTML, Type
 
 </details>
 
@@ -31,7 +29,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&theme=tokyonight" alt="Most Used Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&langs_count=8&hide_border=true&bg_color=0B1020&title_color=00F5FF&text_color=E6F1FF" alt="Most used languages" />
 </p>
 
 </details>
@@ -41,12 +39,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fgagan77007&query=%24.public_repos&label=Public%20Repositories&color=blue" alt="Public repositories" />
-  <img src="https://img.shields.io/github/followers/gagan77007?label=Followers&style=flat" alt="Followers" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&include_all_commits=true&theme=tokyonight" alt="GitHub statistics" />
+  <img src="assets/profile-stats.svg" width="100%" alt="GitHub statistics" />
 </p>
 
 </details>
@@ -56,7 +49,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&theme=tokyo-night" alt="GitHub contribution activity" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&bg_color=0B1020&color=E6F1FF&line=00F5FF&point=FF4DFF&area=true&hide_border=true" width="100%" alt="Contribution activity" />
 </p>
 
 </details>
@@ -72,5 +65,5 @@
 </details>
 
 <p align="center">
-  <sub>gagan77007 · Built with GitHub statistics and activity integrations.</sub>
+  <sub>Designed with a custom neon theme · Updated automatically</sub>
 </p>
