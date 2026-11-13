@@ -14,8 +14,6 @@
   <img src="https://www.gitskins.com/api/section/projects?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 projects visual" />
 </p>
 
-- [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) · ★ 0 — Complete mobile-first single-shop ordering and store management web app built with React, HTML, Type
-
 </details>
 
 <details>
@@ -31,7 +29,6 @@
 <details>
 <summary><b>📊 By the numbers</b></summary>
 <br/>
-
 
 <p align="center">
   <img src="https://www.gitskins.com/api/section/stats?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stats visual" />
