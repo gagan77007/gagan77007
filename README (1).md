@@ -32,7 +32,6 @@
 <summary><b>📊 By the numbers</b></summary>
 <br/>
 
-<b>1</b> public repositories, <b>0</b> stars, <b>3</b> contributions in the last year, a longest streak of <b>1</b> days and <b>0</b> followers.
 
 <p align="center">
   <img src="https://www.gitskins.com/api/section/stats?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stats visual" />
