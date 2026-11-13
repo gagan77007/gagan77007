@@ -1,4 +1,3 @@
-
 <div align="center">
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=280&color=0:020617,30:111827,65:312e81,100:020617&text=GAGAN%20A%20REDDY&fontSize=58&fontColor=FFFFFF&fontAlignY=42&desc=TECHNOLOGY%20%20%2F%2F%20ENTREPRENEURSHIP%20%20%2F%2F%20INNOVATION&descSize=13&descAlignY=60&animation=fadeIn" />
