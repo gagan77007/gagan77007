@@ -1,69 +1,64 @@
-
-<p align="center">
-  <img src="assets/profile-hero.svg" width="100%" alt="Gagan A Reddy - GitHub Profile" />
-</p>
-
-<p align="center">
-  <b>gagan77007</b> · Frontend or full-stack engineer<br/>
-  <sub>Building in public on GitHub.</sub>
-</p>
-
-<p align="center">
-  <a href="https://github.com/gagan77007">GitHub</a>
-  ·
-  <a href="https://github.com/gagan77007?tab=repositories">Projects</a>
-</p>
-
-<details open>
-<summary><b>📌 Top projects</b></summary>
-<br/>
-
-<p align="center">
-  <img src="assets/profile-projects.svg" width="100%" alt="Featured projects" />
-</p>
-
-</details>
-
-<details>
-<summary><b>🧰 Stack</b></summary>
-<br/>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&langs_count=8&hide_border=true&bg_color=0B1020&title_color=00F5FF&text_color=E6F1FF" alt="Most used languages" />
-</p>
-
-</details>
-
-<details>
-<summary><b>📊 By the numbers</b></summary>
-<br/>
-
-<p align="center">
-  <img src="assets/profile-stats.svg" width="100%" alt="GitHub statistics" />
-</p>
-
-</details>
-
-<details>
-<summary><b>🟩 Activity</b></summary>
-<br/>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&bg_color=0B1020&color=E6F1FF&line=00F5FF&point=FF4DFF&area=true&hide_border=true" width="100%" alt="Contribution activity" />
-</p>
-
-</details>
-
-<details>
-<summary><b>👋 Say hello</b></summary>
-<br/>
-
-<p align="center">
-  <a href="https://github.com/gagan77007">GitHub Profile</a>
-</p>
-
-</details>
-
-<p align="center">
-  <sub>Designed with a custom neon theme · Updated automatically</sub>
-</p>
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/hero?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 hero visual" />\
+\</p>\
+\
+\<p align="center">\<b>gagan77007\</b> · Frontend or full-stack engineer\<br/>\<sub>Building in public on GitHub.\</sub>\</p>\
+\
+\<p align="center">\<a href="https\://github.com/gagan77007">GitHub\</a>\</p>\
+\
+\<details open>\
+\<summary>\<b>📌 Top projects\</b>\</summary>\
+\<br/>\
+\
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/projects?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 projects visual" />\
+\</p>\
+\
+\- [shopdirect-ordering-app]\(https\://github.com/gagan77007/shopdirect-ordering-app) · ★ 0 — Complete mobile-first single-shop ordering and store management web app built with React, HTML, Type\
+\
+\</details>\
+\
+\<details>\
+\<summary>\<b>🧰 Stack\</b>\</summary>\
+\<br/>\
+\
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/stack?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stack visual" />\
+\</p>\
+\
+\</details>\
+\
+\<details>\
+\<summary>\<b>📊 By the numbers\</b>\</summary>\
+\<br/>\
+\
+\<b>1\</b> public repositories, \<b>0\</b> stars, \<b>3\</b> contributions in the last year, a longest streak of \<b>1\</b> days and \<b>0\</b> followers.\
+\
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/stats?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stats visual" />\
+\</p>\
+\
+\</details>\
+\
+\<details>\
+\<summary>\<b>🟩 Activity\</b>\</summary>\
+\<br/>\
+\
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/heatmap?username=gagan77007&theme=neon" alt="gagan77007 contribution activity" />\
+\</p>\
+\
+\</details>\
+\
+\<details>\
+\<summary>\<b>👋 Say hello\</b>\</summary>\
+\<br/>\
+\
+\<p align="center">\
+&#x20; \<img src="https\://www\.gitskins.com/api/section/social?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 social visual" />\
+\</p>\
+\
+\</details>\
+\
+\<p align="center">\<sub>gagan77007 · Everything hub generated with \<a href="https\://www\.gitskins.com/readme-generator">GitSkins\</a>\</sub>\</p>\
+&#x20;      this is the code and make like update automatically and can we remove gitskins web like ?
