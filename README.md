@@ -1,20 +1,28 @@
+
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/hero?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 hero visual" />
+  <img src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&include_all_commits=true&theme=tokyonight" alt="GitHub Stats" />
 </p>
 
-<p align="center"><b>gagan77007</b> · Frontend or full-stack engineer<br/><sub>Building in public on GitHub.</sub></p>
+<p align="center">
+  <b>gagan77007</b> · Frontend or full-stack engineer<br/>
+  <sub>Building in public on GitHub.</sub>
+</p>
 
-<p align="center"><a href="https://github.com/gagan77007">GitHub</a></p>
+<p align="center">
+  <a href="https://github.com/gagan77007">GitHub</a>
+</p>
 
 <details open>
 <summary><b>📌 Top projects</b></summary>
 <br/>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/projects?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 projects visual" />
+  <a href="https://github.com/gagan77007/shopdirect-ordering-app">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=gagan77007&repo=shopdirect-ordering-app&theme=tokyonight" alt="ShopDirect project" />
+  </a>
 </p>
 
-- [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) · ★ 0 — Complete mobile-first single-shop ordering and store management web app built with React, HTML, Type
+- [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) · Complete mobile-first single-shop ordering and store management web app built with React, HTML, Type
 
 </details>
 
@@ -23,7 +31,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/stack?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stack visual" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&theme=tokyonight" alt="Most Used Languages" />
 </p>
 
 </details>
@@ -32,10 +40,13 @@
 <summary><b>📊 By the numbers</b></summary>
 <br/>
 
-<b>1</b> public repositories, <b>0</b> stars, <b>3</b> contributions in the last year, a longest streak of <b>1</b> days and <b>0</b> followers.
+<p align="center">
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fgagan77007&query=%24.public_repos&label=Public%20Repositories&color=blue" alt="Public repositories" />
+  <img src="https://img.shields.io/github/followers/gagan77007?label=Followers&style=flat" alt="Followers" />
+</p>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/stats?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 stats visual" />
+  <img src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&include_all_commits=true&theme=tokyonight" alt="GitHub statistics" />
 </p>
 
 </details>
@@ -45,7 +56,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/heatmap?username=gagan77007&theme=neon" alt="gagan77007 contribution activity" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&theme=tokyo-night" alt="GitHub contribution activity" />
 </p>
 
 </details>
@@ -55,9 +66,11 @@
 <br/>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/social?username=gagan77007&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F353734886%3Fv%3D4" alt="gagan77007 social visual" />
+  <a href="https://github.com/gagan77007">GitHub Profile</a>
 </p>
 
 </details>
 
-<p align="center"><sub>gagan77007 · Everything hub generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+<p align="center">
+  <sub>gagan77007 · Built with GitHub statistics and activity integrations.</sub>
+</p>
