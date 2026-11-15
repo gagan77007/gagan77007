@@ -56,7 +56,10 @@ Hello! I'm **Gagan Reddy**. I'm interested in technology, continuous learning an
 ## 04 / LATEST PUBLIC REPOSITORIES
 
 <!-- REPO-LIST:START -->
-_Your latest public repositories will appear here automatically after the first workflow run._
+| Repository | Description | Language | ⭐ Stars | Updated |
+|:--|:--|:--:|--:|:--|
+| [gagan77007](https://github.com/gagan77007/gagan77007) | — | Python | 0 | 2026-11-15 |
+| [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) | Complete mobile-first single-shop ordering and store management web app built with React, HTML, TypeScript, Tailwind CSS, and Express. Includes customer storefront, live cart, atomic inventory, order tracking, and unified owner admin console. | TypeScript | 0 | 2026-11-07 |
 <!-- REPO-LIST:END -->
 
 ---
@@ -66,7 +69,7 @@ _Your latest public repositories will appear here automatically after the first 
 The language summary below is generated from the languages detected in your public repositories.
 
 <!-- LANGUAGES:START -->
-_Automatically detected languages will appear here after the first workflow run._
+`Python` (1) · `TypeScript` (1)
 <!-- LANGUAGES:END -->
 
 ---
