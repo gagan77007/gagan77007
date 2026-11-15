@@ -117,7 +117,8 @@ I'm interested in technology, continuous learning and building useful projects.
 <!-- REPO-LIST:START -->
 | Repository | Description | Language | ⭐ Stars | Updated |
 |:--|:--|:--:|--:|:--|
-| _Your latest public repositories will appear here automatically._ | | | | |
+| [gagan77007](https://github.com/gagan77007/gagan77007) | A project from my GitHub profile. | Python | 0 | 2026-11-15 |
+| [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) | Complete mobile-first single-shop ordering and store management web app built with React, HTML, TypeScript, Tailwind CSS, and Express. Includes customer storefront, live cart, atomic inventory, order tracking, and unified owner admin console. | TypeScript | 0 | 2026-11-07 |
 <!-- REPO-LIST:END -->
 
 ---
@@ -135,7 +136,9 @@ I'm interested in technology, continuous learning and building useful projects.
 <br/><br/>
 
 <!-- LANGUAGES:START -->
-_Language badges will be generated automatically from your public repositories._
+<img src="https://img.shields.io/badge/TypeScript-94.5%25-172554?style=for-the-badge" alt="TypeScript 94.5%"/>
+<img src="https://img.shields.io/badge/Python-3.8%25-172554?style=for-the-badge" alt="Python 3.8%"/>
+<img src="https://img.shields.io/badge/HTML-1.7%25-172554?style=for-the-badge" alt="HTML 1.7%"/>
 <!-- LANGUAGES:END -->
 
 </div>
