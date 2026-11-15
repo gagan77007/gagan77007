@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./coding-room.gif" width="100%" alt="Gagan's original coding animation"/>
+<img src="./coding-room.gif" width="100%" alt="Gagan's coding room animation"/>
 
-# GAGAN REDDY
+# <span>GAGAN REDDY</span>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&duration=2500&pause=900&color=45D5F5&center=true&vCenter=true&width=700&lines=ASPIRING+DEVELOPER;TECHNOLOGY+ENTHUSIAST;ALWAYS+LEARNING+AND+BUILDING;TURNING+IDEAS+INTO+REALITY" alt="Animated introduction"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=23&duration=2500&pause=900&color=45D5F5&center=true&vCenter=true&width=720&lines=ASPIRING+DEVELOPER;TECHNOLOGY+ENTHUSIAST;ALWAYS+LEARNING+AND+BUILDING;TURNING+IDEAS+INTO+REALITY" alt="Animated introduction"/>
 
 <a href="https://github.com/gagan77007"><img src="https://img.shields.io/badge/GitHub-Explore%20my%20work-45D5F5?style=for-the-badge&logo=github&logoColor=black" alt="GitHub"/></a>
 <img src="https://komarev.com/ghpvc/?username=gagan77007&style=for-the-badge&color=blueviolet&label=PROFILE+VIEWS" alt="Profile views"/>
@@ -30,8 +30,8 @@ Hello! I'm **Gagan Reddy**. I'm interested in technology, continuous learning an
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub statistics"/>
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&cache_seconds=86400" alt="GitHub statistics"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="Top languages"/>
 
 <br/>
 
@@ -45,9 +45,9 @@ Hello! I'm **Gagan Reddy**. I'm interested in technology, continuous learning an
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/gagan77007/gagan77007/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake animation"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="GitHub contribution activity graph"/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&theme=tokyo-night&hide_border=true&area=true" width="100%" alt="Contribution activity graph"/>
+<img src="https://raw.githubusercontent.com/gagan77007/gagan77007/output/github-contribution-grid-snake.svg" width="100%" alt="Animated contribution snake"/>
 
 </div>
 
@@ -56,17 +56,17 @@ Hello! I'm **Gagan Reddy**. I'm interested in technology, continuous learning an
 ## 04 / LATEST PUBLIC REPOSITORIES
 
 <!-- REPO-LIST:START -->
-_Your latest public repositories will appear here automatically after the first workflow run._
+_Your latest public repositories will appear here automatically._
 <!-- REPO-LIST:END -->
 
 ---
 
 ## 05 / TECHNOLOGY SNAPSHOT
 
-The language summary below is generated from the languages detected in your public repositories.
+_Languages are calculated from the detected code in your public repositories and refreshed automatically._
 
 <!-- LANGUAGES:START -->
-_Automatically detected languages will appear here after the first workflow run._
+_Technology details will appear here after the workflow runs._
 <!-- LANGUAGES:END -->
 
 ---
