@@ -1,22 +1,19 @@
-name: Update GitHub profile README
+name: Update GitHub Profile README
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
-  workflow_dispatch:
-  push:
-    paths:
-      - "scripts/update_profile.py"
-      - ".github/workflows/update-profile.yml"
 
 permissions:
   contents: write
 
 jobs:
-  update-profile:
+  update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out profile repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -24,20 +21,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Fetch public GitHub data and update README
+      - name: Update profile
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY_OWNER: gagan77007
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: python scripts/update_profile.py
 
-      - name: Commit updated README
+      - name: Commit changes
         run: |
           if [[ -n "$(git status --porcelain README.md)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add README.md
-            git commit -m "chore: refresh GitHub profile data"
+            git commit -m "Update GitHub profile"
             git push
           else
-            echo "README is already up to date."
+            echo "No README changes."
           fi
