@@ -1,0 +1,34 @@
+# Gagan's automatic GitHub profile setup
+
+## Files included
+- `README.md` — premium dark/cyan profile layout
+- `coding-room.gif` — original coding animation
+- `.github/workflows/update-profile.yml` — refreshes repository/language sections every 6 hours
+- `.github/workflows/contribution-snake.yml` — generates the contribution snake daily
+- `scripts/update_profile.py` — reads public GitHub repository data and updates README markers
+
+## Install it in your profile repository
+1. Open https://github.com/gagan77007/gagan77007
+2. Upload/replace `README.md` in the repository root.
+3. Upload `coding-room.gif` in the repository root.
+4. Upload the `.github` folder and `scripts` folder, keeping their folder structure.
+   - If the website does not let you upload folders, create each file using **Add file → Create new file** and enter the full path shown in the filename, for example `.github/workflows/update-profile.yml`.
+5. Open **Settings → Actions → General → Workflow permissions** and ensure workflows are allowed to have read/write permissions (or the workflow's `contents: write` permission is honoured).
+6. Open the **Actions** tab and enable workflows if GitHub asks.
+7. Run **Update GitHub profile README** once using **Run workflow**.
+8. Run **Generate contribution snake** once using **Run workflow**.
+9. After the snake workflow succeeds, the `output` branch is created. The snake image will then appear in the README.
+
+## What updates
+- Up to 6 latest updated public, non-fork, non-archived repositories
+- Repository descriptions, primary language, stars, and last push date
+- A language summary inferred from those public repositories
+- External stats cards refresh when their providers update
+- Contribution snake is regenerated daily
+
+## Notes
+- This automation reads public repository information. It does not expose private repositories.
+- The workflow does not need a personal access token; it uses GitHub's built-in `GITHUB_TOKEN`.
+- GitHub's own contribution calendar is authoritative. Contribution snake is generated from GitHub contribution data and may not include private activity unless GitHub's action configuration/account visibility allows it.
+- The README's stats cards are hosted by third-party services and can occasionally be rate-limited or unavailable.
+- The six-repository limit is set in `scripts/update_profile.py` (`MAX_REPOS = 6`).
