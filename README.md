@@ -49,9 +49,9 @@
 <!-- LANGUAGES:START -->
 | Language | Usage |
 |---|---:|
-| TypeScript | 93.6% |
-| Python | 4.8% |
-| HTML | 1.6% |
+| TypeScript | 85.8% |
+| Python | 12.7% |
+| HTML | 1.5% |
 <!-- LANGUAGES:END -->
 
 ### ◈ 08 — CONTRIBUTION ACTIVITY
