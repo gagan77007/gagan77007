@@ -38,11 +38,20 @@
 ### ◈ 06 — REPOSITORY COLLECTION
 
 <!-- REPO-LIST:START -->
+| Repository | Language | Stars |
+|---|---|---:|
+| [gagan77007](https://github.com/gagan77007/gagan77007) | Python | ⭐ 0 |
+| [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) | TypeScript | ⭐ 0 |
 <!-- REPO-LIST:END -->
 
 ### ◈ 07 — LANGUAGE DISTRIBUTION
 
 <!-- LANGUAGES:START -->
+| Language | Usage |
+|---|---:|
+| TypeScript | 93.6% |
+| Python | 4.8% |
+| HTML | 1.6% |
 <!-- LANGUAGES:END -->
 
 ### ◈ 08 — CONTRIBUTION ACTIVITY
