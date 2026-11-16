@@ -1,41 +1,13 @@
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:07111F,35:102A43,70:312E81,100:0891B2&text=GAGAN%20REDDY&fontColor=EAFBFF&fontSize=58&fontAlignY=39&desc=BUILDING%20%7C%20LEARNING%20%7C%20CREATING&descColor=67E8F9&descAlignY=65&descSize=15" width="100%" alt="Gagan Reddy"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=155&color=0:050816,35:102A43,70:312E81,100:5B21B6&text=GAGAN%20REDDY&fontColor=EAFBFF&fontSize=48&fontAlignY=42&desc=FULL%20STACK%20DEVELOPER%20%7C%20TECH%20ENTHUSIAST&descAlignY=65&descSize=13&animation=fadeIn" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2200&pause=650&color=67E8F9&center=true&vCenter=true&width=760&lines=WELCOME+TO+MY+DEVELOPER+SPACE;TURNING+IDEAS+INTO+REAL+PROJECTS;ALWAYS+LEARNING.+ALWAYS+BUILDING." alt="Animated introduction"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=2500&pause=900&color=00F5FF&center=true&vCenter=true&width=600&lines=Welcome+to+my+digital+space;Building+ideas+into+reality;Learning+%7C+Building+%7C+Growing" />
 
-<br/>
+<br>
 
-<img src="./assets/terminal.svg" width="100%" alt="Animated developer terminal"/>
-
-<br/><br/>
-
-<table width="100%">
-<tr>
-<td align="center">
-
-<img src="https://img.shields.io/badge/MY%20CODING%20WORKSPACE-00D9FF?style=for-the-badge&labelColor=080D1B" alt="Workspace"/>
-
-<br/><br/>
-
-<img src="./coding-room.gif" width="92%" alt="Original coding room animation"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/SYSTEM%20ONLINE-8B5CF6?style=for-the-badge&labelColor=080D1B" alt="System online"/>
-
-</td>
-</tr>
-</table>
-
-<a href="https://github.com/gagan77007">
-<img src="https://img.shields.io/badge/EXPLORE%20MY%20WORK-111827?style=for-the-badge&logo=github&logoColor=67E8F9" alt="Explore work"/>
-</a>
-<a href="https://github.com/gagan77007?tab=repositories">
-<img src="https://img.shields.io/badge/VIEW%20PROJECTS-312E81?style=for-the-badge&logo=github&logoColor=white" alt="Projects"/>
-</a>
-<img src="https://komarev.com/ghpvc/?username=gagan77007&style=for-the-badge&color=7C3AED&label=PROFILE+VIEWS" alt="Profile views"/>
+<img src="https://komarev.com/ghpvc/?username=gagan77007&style=for-the-badge&color=5B21B6&label=PROFILE+VIEWS"/>
+<img src="https://img.shields.io/github/followers/gagan77007?style=for-the-badge&logo=github&color=0891B2&labelColor=050816"/>
 
 </div>
 
@@ -43,136 +15,58 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/01-ABOUT%20THE%20DEVELOPER-111827?style=for-the-badge&logo=aboutdotme&logoColor=67E8F9" alt="About"/>
+### ◈ 01 — DEVELOPER PROFILE
 
-</div>
+<img src="./assets/profile-dashboard.svg" width="100%" alt="Developer dashboard"/>
 
-<table width="100%">
-<tr>
-<td width="68%" valign="top">
+### ◈ 02 — MY CODING SPACE
 
-### 👋 Hello, I'm Gagan Reddy
+<img src="./coding-room.gif" width="85%" alt="Coding workspace"/>
 
-I'm interested in technology, software development and creating useful digital experiences.
+### ◈ 03 — TECHNOLOGIES & TOOLS
 
-- 🚀 Exploring new technologies and development tools.
-- 💡 Solving problems through creative thinking.
-- 🛠️ Building practical applications and experiments.
-- 🧠 Improving my technical and problem-solving skills.
-- 🤝 Open to learning and collaboration.
+<img src="https://skillicons.dev/icons?i=python,java,js,ts,html,css,react,nodejs,git,github,vscode,mysql&theme=dark"/>
 
-> "Great things are built one line of code at a time."
+### ◈ 04 — DEVELOPER TERMINAL
 
-</td>
-<td width="32%" align="center">
+<img src="./assets/terminal.svg" width="100%" alt="Developer terminal"/>
 
-<img src="https://img.shields.io/badge/FOCUS-LEARN%20%26%20BUILD-164E63?style=for-the-badge&labelColor=080D1B" alt="Focus"/>
+### ◈ 05 — FEATURED PROJECTS
 
-<br/><br/>
+<img src="./assets/projects.svg" width="100%" alt="Featured projects"/>
 
-<img src="https://img.shields.io/badge/MINDSET-CURIOUS-5B21B6?style=for-the-badge&labelColor=080D1B" alt="Mindset"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/GOAL-KEEP%20GROWING-164E63?style=for-the-badge&labelColor=080D1B" alt="Goal"/>
-
-</td>
-</tr>
-</table>
-
----
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/02-PROFILE%20SIGNAL-111827?style=for-the-badge&logo=github&logoColor=67E8F9" alt="Profile signal"/>
-
-<br/><br/>
-
-<img src="./assets/profile-dashboard.svg" width="100%" alt="GitHub profile dashboard"/>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/03-PROJECTS.LIST-111827?style=for-the-badge&logo=github&logoColor=67E8F9" alt="Projects"/>
-
-<br/><br/>
-
-<img src="./assets/projects.svg" width="100%" alt="GitHub project cards"/>
-
-</div>
+### ◈ 06 — REPOSITORY COLLECTION
 
 <!-- REPO-LIST:START -->
-| Repository | Description | Language | ⭐ Stars | Updated |
-|:--|:--|:--:|--:|:--|
-| [gagan77007](https://github.com/gagan77007/gagan77007) | A project from my GitHub profile. | Python | 0 | 2026-11-15 |
-| [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) | Complete mobile-first single-shop ordering and store management web app built with React, HTML, TypeScript, Tailwind CSS, and Express. Includes customer storefront, live cart, atomic inventory, order tracking, and unified owner admin console. | TypeScript | 0 | 2026-11-07 |
 <!-- REPO-LIST:END -->
 
-<div align="center">
-
-<a href="https://github.com/gagan77007?tab=repositories">
-<img src="https://img.shields.io/badge/VIEW%20ALL%20REPOSITORIES-312E81?style=for-the-badge&logo=github&logoColor=white" alt="View repositories"/>
-</a>
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/04-TECHNOLOGY%20STACK-111827?style=for-the-badge&logo=codefactor&logoColor=67E8F9" alt="Technology stack"/>
-
-<br/><br/>
-
-<sub>Automatically updated from my public repositories.</sub>
-
-<br/><br/>
+### ◈ 07 — LANGUAGE DISTRIBUTION
 
 <!-- LANGUAGES:START -->
-<img src="https://img.shields.io/badge/TypeScript-93.6%25-172554?style=for-the-badge" alt="TypeScript 93.6%"/>
-<img src="https://img.shields.io/badge/Python-4.8%25-172554?style=for-the-badge" alt="Python 4.8%"/>
-<img src="https://img.shields.io/badge/HTML-1.6%25-172554?style=for-the-badge" alt="HTML 1.6%"/>
 <!-- LANGUAGES:END -->
 
-</div>
-
----
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/05-CONTRIBUTION%20ACTIVITY-111827?style=for-the-badge&logo=github&logoColor=67E8F9" alt="Contribution activity"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=gagan77007&bg_color=080D1B&color=67E8F9&line=8B5CF6&point=FFFFFF&area=true&hide_border=true" width="100%" alt="GitHub activity graph"/>
-
-<br/><br/>
+### ◈ 08 — CONTRIBUTION ACTIVITY
 
 <img src="https://raw.githubusercontent.com/gagan77007/gagan77007/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution snake"/>
 
-</div>
+### ◈ 09 — GITHUB STATISTICS
 
----
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=gagan77007&show_icons=true&hide_border=true&bg_color=050816&title_color=00F5FF&icon_color=A855F7&text_color=EAFBFF"/>
 
-<div align="center">
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gagan77007&layout=compact&hide_border=true&bg_color=050816&title_color=00F5FF&text_color=EAFBFF"/>
 
-<img src="https://img.shields.io/badge/06-LET'S%20CONNECT-111827?style=for-the-badge&logo=handshake&logoColor=67E8F9" alt="Connect"/>
-
-<br/><br/>
-
-### 🤝 Let's learn and build together
+### ◈ CONNECT WITH ME
 
 <a href="https://github.com/gagan77007">
-<img src="https://img.shields.io/badge/GITHUB-FOLLOW%20MY%20JOURNEY-111827?style=for-the-badge&logo=github&logoColor=67E8F9" alt="GitHub"/>
+<img src="https://img.shields.io/badge/GitHub-Explore%20My%20Work-050816?style=for-the-badge&logo=github&logoColor=00F5FF"/>
 </a>
 
-<br/><br/>
+<br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2200&pause=650&color=67E8F9&center=true&vCenter=true&width=520&lines=KEEP+LEARNING;KEEP+BUILDING;KEEP+GROWING" alt="Animated footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=95&section=footer&color=0:5B21B6,50:102A43,100:050816"/>
 
-<br/><br/>
+**THANK YOU FOR VISITING MY PROFILE**
 
-<sub>✦ Designed with code, creativity and curiosity ✦</sub>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0891B2,50:312E81,100:020617" width="100%" alt="Footer"/>
+<sub>Designed with passion • Built with code</sub>
 
 </div>
