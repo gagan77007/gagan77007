@@ -37,6 +37,10 @@
 ### PROJECT REPOSITORIES
 
 <!-- REPO-LIST:START -->
+| Repository | Language | Stars |
+|---|---|---:|
+| [gagan77007](https://github.com/gagan77007/gagan77007) | Python | ⭐ 0 |
+| [shopdirect-ordering-app](https://github.com/gagan77007/shopdirect-ordering-app) | TypeScript | ⭐ 0 |
 <!-- REPO-LIST:END -->
 
 </div>
@@ -46,6 +50,11 @@
 ### LANGUAGE DISTRIBUTION
 
 <!-- LANGUAGES:START -->
+| Language | Usage |
+|---|---:|
+| TypeScript | 85.8% |
+| Python | 12.7% |
+| HTML | 1.5% |
 <!-- LANGUAGES:END -->
 
 </div>
