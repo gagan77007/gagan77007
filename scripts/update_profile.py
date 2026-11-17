@@ -1,12 +1,9 @@
 import json
-import os
 import html
+import os
 import urllib.request
 from pathlib import Path
-
-# ==========================================
-# CONFIGURATION
-# ==========================================
+from datetime import datetime, timezone
 
 USERNAME = "gagan77007"
 
@@ -27,498 +24,401 @@ if TOKEN:
     HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
 
-# ==========================================
-# GITHUB API
-# ==========================================
-
-def github_api(url):
-
+def api(url):
     request = urllib.request.Request(
         url,
         headers=HEADERS
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=30
-    ) as response:
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.loads(response.read())
 
-        return json.loads(
-            response.read().decode("utf-8")
-        )
-
-
-# ==========================================
-# HELPER FUNCTIONS
-# ==========================================
 
 def safe(value):
-
-    return html.escape(
-        str(value or ""),
-        quote=True
-    )
-
-
-def truncate(text, limit):
-
-    text = str(text or "")
-
-    if len(text) > limit:
-        return text[:limit - 3] + "..."
-
-    return text
+    return html.escape(str(value or ""), quote=True)
 
 
 def svg_start(height):
-
     return f'''<svg xmlns="http://www.w3.org/2000/svg"
-    width="1000"
-    height="{height}"
+    width="1000" height="{height}"
     viewBox="0 0 1000 {height}">
 
     <defs>
 
-      <linearGradient id="border"
-        x1="0" y1="0" x2="1" y2="1">
-
+      <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#00F5FF"/>
         <stop offset="50%" stop-color="#4263EB"/>
-        <stop offset="100%" stop-color="#A855F7"/>
-
+        <stop offset="100%" stop-color="#D946EF"/>
       </linearGradient>
 
-      <linearGradient id="panel"
-        x1="0" y1="0" x2="1" y2="1">
-
-        <stop offset="0%" stop-color="#101C35"/>
-        <stop offset="100%" stop-color="#080D20"/>
-
+      <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00F5FF"/>
+        <stop offset="100%" stop-color="#D946EF"/>
       </linearGradient>
 
-      <filter id="glow"
-        x="-30%" y="-30%" width="160%" height="160%">
+      <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#10172C"/>
+        <stop offset="100%" stop-color="#030713"/>
+      </linearGradient>
 
-        <feGaussianBlur stdDeviation="2.5"
-          result="blur"/>
-
+      <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
         </feMerge>
-
       </filter>
 
     </defs>
 
-    <rect
-      x="5"
-      y="5"
-      width="990"
-      height="{height - 10}"
-      rx="18"
-      fill="url(#panel)"
-      stroke="url(#border)"
-      stroke-width="2"
-      filter="url(#glow)"
-    />
-
+    <rect width="1000" height="{height}" fill="#030713"/>
     '''
 
 
-def svg_end():
+def panel(x, y, width, height, radius=15):
+    return f'''
+    <rect x="{x}" y="{y}"
+      width="{width}" height="{height}"
+      rx="{radius}"
+      fill="url(#panel)"
+      stroke="url(#neon)"
+      stroke-width="1.5"/>
+    '''
 
-    return "</svg>"
+
+def label(x, y, value, size=15, color="#EAFBFF", weight="normal"):
+    return f'''
+    <text x="{x}" y="{y}"
+      fill="{color}"
+      font-size="{size}"
+      font-weight="{weight}"
+      font-family="Arial, sans-serif">
+      {safe(value)}
+    </text>
+    '''
 
 
-def save_svg(filename, content):
+def save(name, content):
+    path = ASSETS / name
+    path.write_text(content + "\n</svg>", encoding="utf-8")
+    print("Generated:", name)
 
-    path = ASSETS / filename
 
-    path.write_text(
-        content,
-        encoding="utf-8"
+def update_readme(start, end, replacement):
+    content = README.read_text(encoding="utf-8")
+
+    first = content.find(start)
+    last = content.find(end)
+
+    if first == -1 or last == -1 or last < first:
+        raise ValueError(f"Missing README markers: {start}")
+
+    last += len(end)
+
+    content = content[:first] + replacement + content[last:]
+
+    README.write_text(content, encoding="utf-8")
+
+
+# ------------------------------------------
+# HEADER
+# ------------------------------------------
+
+def create_header():
+
+    content = svg_start(230)
+
+    content += label(
+        500, 35,
+        "// DEVELOP • BUILD • INNOVATE",
+        14, "#91DFFF"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
-
-    print(f"Generated: {path}")
-
-
-# ==========================================
-# TERMINAL DESIGN
-# ==========================================
-
-def create_terminal():
-
-    content = svg_start(155)
 
     content += '''
+    <path d="M170 65 H215 M170 65 V115 M830 65 H785 M830 65 V115"
+      fill="none" stroke="url(#neon)" stroke-width="3"
+      filter="url(#glow)"/>
 
-    <circle cx="32" cy="28" r="6" fill="#FF5F57"/>
-    <circle cx="52" cy="28" r="6" fill="#FEBC2E"/>
-    <circle cx="72" cy="28" r="6" fill="#28C840"/>
-
-    <text x="100" y="33"
-      fill="#8FA3C8"
-      font-size="13"
-      font-family="monospace">
-
-      gagan@developer:~
-
+    <text x="500" y="125"
+      text-anchor="middle"
+      font-size="65"
+      font-weight="bold"
+      font-family="Arial"
+      fill="url(#title)"
+      filter="url(#glow)">
+      GAGAN REDDY
     </text>
 
-    <text x="35" y="76"
+    <text x="500" y="165"
+      text-anchor="middle"
+      font-size="20"
+      letter-spacing="6"
       fill="#00F5FF"
-      font-size="18"
-      font-family="monospace">
-
-      $ whoami
-
+      font-family="Arial">
+      DEVELOPER
     </text>
-
-    <text x="35" y="110"
-      fill="#EAFBFF"
-      font-size="17"
-      font-family="monospace">
-
-      Full Stack Developer | Tech Enthusiast
-
-    </text>
-
-    <rect x="690" y="94"
-      width="9"
-      height="19"
-      fill="#00F5FF">
-
-      <animate
-        attributeName="opacity"
-        values="1;0;1"
-        dur="1.2s"
-        repeatCount="indefinite"/>
-
-    </rect>
-
     '''
 
-    content += svg_end()
-
-    save_svg(
-        "terminal.svg",
-        content
+    content += label(
+        500, 205,
+        "BUILDING IDEAS INTO REALITY  •  LEARNING EVERY DAY",
+        13, "#B8C8E6"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
 
+    save("header.svg", content)
 
-# ==========================================
-# PROFILE DASHBOARD
-# ==========================================
 
-def create_dashboard(user, repos):
+# ------------------------------------------
+# PROFILE
+# ------------------------------------------
 
-    total_stars = sum(
-        repo["stargazers_count"]
-        for repo in repos
+def create_profile(user, repos):
+
+    stars = sum(r["stargazers_count"] for r in repos)
+
+    content = svg_start(235)
+
+    content += panel(20, 10, 960, 215)
+
+    content += label(65, 60, "ABOUT ME", 21, "#00F5FF", "bold")
+
+    bio = user.get("bio") or "Developer • Technology enthusiast"
+
+    content += label(65, 95, bio[:65], 15)
+
+    content += label(
+        65, 135,
+        "Learning • Building • Creating",
+        14, "#B8C8E6"
     )
 
-    followers = user.get("followers", 0)
-
-    public_repos = user.get(
-        "public_repos", 0
+    content += label(
+        65, 175,
+        "GITHUB.COM/GAGAN77007",
+        13, "#A78BFA"
     )
 
-    bio = safe(
-        user.get("bio")
-        or "Building, learning and exploring technology."
-    )
-
-    bio = truncate(bio, 100)
-
-    cards = [
-
-        ("PUBLIC REPOSITORIES", public_repos),
-
-        ("FOLLOWERS", followers),
-
-        ("TOTAL STARS", total_stars)
-
+    stats = [
+        ("REPOSITORIES", user.get("public_repos", 0)),
+        ("STARS", stars),
+        ("FOLLOWERS", user.get("followers", 0)),
+        ("FOLLOWING", user.get("following", 0))
     ]
 
-    content = svg_start(210)
+    for i, (name, value) in enumerate(stats):
 
-    content += f'''
+        x = 370 + i * 145
 
-    <text x="35" y="45"
-      fill="#00F5FF"
-      font-size="20"
-      font-weight="bold"
-      font-family="Arial">
+        content += panel(x, 55, 130, 120, 12)
 
-      DEVELOPER PROFILE
+        content += label(
+            x + 65, 110, value, 25, "#00F5FF", "bold"
+        ).replace(
+            '<text x=',
+            '<text text-anchor="middle" x=',
+            1
+        )
 
-    </text>
+        content += label(
+            x + 65, 145, name, 10, "#B8C8E6"
+        ).replace(
+            '<text x=',
+            '<text text-anchor="middle" x=',
+            1
+        )
 
-    <text x="35" y="76"
-      fill="#DCEBFF"
-      font-size="14"
-      font-family="Arial">
+    save("profile.svg", content)
 
-      {bio}
 
-    </text>
+# ------------------------------------------
+# TECHNOLOGY PANEL
+# ------------------------------------------
 
-    '''
+def create_technology():
 
-    for index, (label, value) in enumerate(cards):
+    content = svg_start(150)
 
-        x = 35 + index * 315
+    content += panel(20, 10, 960, 130)
 
-        content += f'''
-
-        <rect
-          x="{x}"
-          y="105"
-          width="285"
-          height="75"
-          rx="12"
-          fill="#111D36"
-          stroke="#294B75"
-          stroke-width="1.3"
-        />
-
-        <text
-          x="{x + 18}"
-          y="135"
-          fill="#8FA3C8"
-          font-size="12"
-          font-family="Arial">
-
-          {label}
-
-        </text>
-
-        <text
-          x="{x + 18}"
-          y="163"
-          fill="#00F5FF"
-          font-size="25"
-          font-weight="bold"
-          font-family="Arial">
-
-          {value}
-
-        </text>
-
-        '''
-
-    content += svg_end()
-
-    save_svg(
-        "profile-dashboard.svg",
-        content
+    content += label(
+        500, 42,
+        "✦  TECHNOLOGIES I USE",
+        20, "#00F5FF", "bold"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
 
+    skills = [
+        "PYTHON", "JAVA", "JAVASCRIPT",
+        "TYPESCRIPT", "HTML", "CSS",
+        "REACT", "NODE.JS", "GIT",
+        "GITHUB", "VSCODE", "MYSQL"
+    ]
 
-# ==========================================
+    for i, skill in enumerate(skills):
+
+        row = i // 6
+        col = i % 6
+
+        x = 43 + col * 153
+        y = 57 + row * 39
+
+        content += panel(x, y, 135, 32, 7)
+
+        content += label(
+            x + 67, y + 21,
+            skill, 11, "#EAFBFF", "bold"
+        ).replace(
+            '<text x=',
+            '<text text-anchor="middle" x=',
+            1
+        )
+
+    save("technology.svg", content)
+
+
+# ------------------------------------------
 # PROJECT CARDS
-# ==========================================
+# ------------------------------------------
 
 def create_projects(repos):
 
     projects = sorted(
         repos,
-        key=lambda repo: (
-            repo["stargazers_count"],
-            repo["updated_at"]
+        key=lambda r: (
+            r["stargazers_count"],
+            r["updated_at"]
         ),
         reverse=True
-    )[:4]
+    )[:3]
 
-    height = 100 + max(1, len(projects)) * 105
+    content = svg_start(300)
 
-    content = svg_start(height)
+    content += panel(20, 10, 960, 280)
 
-    content += '''
+    content += label(
+        50, 48,
+        "✦ FEATURED PROJECTS",
+        20, "#00F5FF", "bold"
+    )
 
-    <text x="35" y="45"
-      fill="#00F5FF"
-      font-size="20"
-      font-weight="bold"
-      font-family="Arial">
+    for i, repo in enumerate(projects):
 
-      LATEST GITHUB PROJECTS
+        x = 43 + i * 305
 
-    </text>
+        content += panel(x, 75, 285, 185, 12)
 
-    '''
+        content += label(
+            x + 18, 112,
+            repo["name"][:28],
+            16, "#00F5FF", "bold"
+        )
+
+        description = (
+            repo.get("description")
+            or "Explore this project on GitHub."
+        )
+
+        content += label(
+            x + 18, 145,
+            description[:34],
+            12
+        )
+
+        content += label(
+            x + 18, 170,
+            description[34:68],
+            12
+        )
+
+        content += label(
+            x + 18, 225,
+            f"★ {repo['stargazers_count']}  •  {repo.get('language') or 'Code'}",
+            12, "#C8C8FF"
+        )
 
     if not projects:
+        content += label(50, 110, "No public projects available yet.")
 
-        content += '''
+    save("projects.svg", content)
 
-        <text x="35" y="100"
-          fill="#EAFBFF"
-          font-size="16"
-          font-family="Arial">
 
-          No public projects available yet.
+# ------------------------------------------
+# FOOTER
+# ------------------------------------------
 
-        </text>
+def create_footer():
 
-        '''
+    content = svg_start(160)
 
-    for index, repo in enumerate(projects):
+    content += panel(20, 10, 960, 140)
 
-        y = 65 + index * 105
-
-        name = safe(
-            truncate(repo["name"], 48)
-        )
-
-        description = safe(
-            truncate(
-                repo.get("description")
-                or "Explore this project on GitHub.",
-                95
-            )
-        )
-
-        language = safe(
-            repo.get("language") or "Various"
-        )
-
-        stars = repo.get(
-            "stargazers_count", 0
-        )
-
-        content += f'''
-
-        <rect
-          x="25"
-          y="{y}"
-          width="950"
-          height="88"
-          rx="12"
-          fill="#101B32"
-          stroke="#29466C"
-          stroke-width="1.2"
-        />
-
-        <text
-          x="48"
-          y="{y + 30}"
-          fill="#00F5FF"
-          font-size="17"
-          font-weight="bold"
-          font-family="Arial">
-
-          {name}
-
-        </text>
-
-        <text
-          x="48"
-          y="{y + 53}"
-          fill="#B8C8E6"
-          font-size="12"
-          font-family="Arial">
-
-          {description}
-
-        </text>
-
-        <text
-          x="48"
-          y="{y + 75}"
-          fill="#A78BFA"
-          font-size="11"
-          font-family="Arial">
-
-          {language}  •  ★ {stars}
-
-        </text>
-
-        '''
-
-    content += svg_end()
-
-    save_svg(
-        "projects.svg",
-        content
+    content += label(
+        500, 65,
+        "LET'S CONNECT",
+        23, "#00F5FF", "bold"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
 
-
-# ==========================================
-# README UPDATE
-# ==========================================
-
-def update_readme(start, end, replacement):
-
-    text = README.read_text(
-        encoding="utf-8"
+    content += label(
+        500, 100,
+        "THANK YOU FOR VISITING MY PROFILE",
+        14, "#EAFBFF"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
 
-    first = text.find(start)
-
-    last = text.find(end)
-
-    if first == -1 or last == -1:
-
-        raise ValueError(
-            f"README markers missing: {start}"
-        )
-
-    if last < first:
-
-        raise ValueError(
-            "README markers are in the wrong order."
-        )
-
-    last += len(end)
-
-    text = (
-        text[:first]
-        + replacement
-        + text[last:]
+    content += label(
+        500, 125,
+        "Designed with passion • Built with code",
+        11, "#AABBD5"
+    ).replace(
+        '<text x="500"',
+        '<text text-anchor="middle" x="500"',
+        1
     )
 
-    README.write_text(
-        text,
-        encoding="utf-8"
-    )
+    save("footer.svg", content)
 
 
-# ==========================================
-# AUTOMATIC REPOSITORY LIST
-# ==========================================
+# ------------------------------------------
+# REPOSITORY TABLE
+# ------------------------------------------
 
-def update_repo_list(repos):
+def update_repositories(repos):
 
     rows = [
-
         "| Repository | Language | Stars |",
-
         "|---|---|---:|"
-
     ]
 
     latest = sorted(
         repos,
-        key=lambda repo: repo["updated_at"],
+        key=lambda r: r["updated_at"],
         reverse=True
-    )[:8]
+    )[:6]
 
     for repo in latest:
 
-        name = repo["name"]
-
-        url = repo["html_url"]
-
-        language = repo.get(
-            "language"
-        ) or "Various"
-
-        stars = repo["stargazers_count"]
-
         rows.append(
-            f"| [{name}]({url}) | {language} | ⭐ {stars} |"
+            f"| [{repo['name']}]({repo['html_url']}) "
+            f"| {repo.get('language') or 'Various'} "
+            f"| ⭐ {repo['stargazers_count']} |"
         )
 
     replacement = (
@@ -534,9 +434,9 @@ def update_repo_list(repos):
     )
 
 
-# ==========================================
-# AUTOMATIC LANGUAGE STATISTICS
-# ==========================================
+# ------------------------------------------
+# LANGUAGE STATISTICS
+# ------------------------------------------
 
 def update_languages(repos):
 
@@ -545,57 +445,37 @@ def update_languages(repos):
     for repo in repos:
 
         try:
-
-            languages = github_api(
-                repo["languages_url"]
-            )
+            languages = api(repo["languages_url"])
 
             for language, amount in languages.items():
-
                 totals[language] = (
-                    totals.get(language, 0)
-                    + amount
+                    totals.get(language, 0) + amount
                 )
 
         except Exception as error:
+            print("Language error:", error)
 
-            print(
-                f"Language fetch failed: {error}"
-            )
+    total = sum(totals.values())
 
-    total_bytes = sum(
-        totals.values()
-    )
+    rows = [
+        "| Language | Usage |",
+        "|---|---:|"
+    ]
 
-    if total_bytes == 0:
-
-        rows = [
-            "No language data available yet."
-        ]
-
-    else:
-
-        rows = [
-
-            "| Language | Usage |",
-
-            "|---|---:|"
-
-        ]
-
+    if total:
         for language, amount in sorted(
             totals.items(),
             key=lambda item: item[1],
             reverse=True
-        )[:8]:
+        )[:6]:
 
-            percentage = (
-                amount / total_bytes
-            ) * 100
+            percentage = amount / total * 100
 
             rows.append(
                 f"| {language} | {percentage:.1f}% |"
             )
+    else:
+        rows = ["No language information available yet."]
 
     replacement = (
         "<!-- LANGUAGES:START -->\n"
@@ -610,60 +490,48 @@ def update_languages(repos):
     )
 
 
-# ==========================================
+# ------------------------------------------
 # MAIN
-# ==========================================
+# ------------------------------------------
 
 def main():
 
-    print("\nStarting GitHub profile update...\n")
+    print("Fetching GitHub profile...")
 
-    print("Fetching profile...")
-
-    user = github_api(
+    user = api(
         f"https://api.github.com/users/{USERNAME}"
     )
 
     print("Fetching repositories...")
 
-    repos = github_api(
+    repos = api(
         f"https://api.github.com/users/{USERNAME}/repos"
         "?per_page=100&sort=updated"
     )
 
     repos = [
-        repo for repo in repos
-        if not repo.get("fork", False)
+        r for r in repos
+        if not r.get("fork", False)
     ]
 
-    print("Generating visual panels...")
+    print("Generating dashboard...")
 
-    create_terminal()
+    create_header()
+    create_profile(user, repos)
+    create_technology()
+    create_projects(repos)
+    create_footer()
 
-    create_dashboard(
-        user,
-        repos
-    )
+    print("Updating repository list...")
 
-    create_projects(
-        repos
-    )
+    update_repositories(repos)
 
-    print("Updating repositories...")
+    print("Updating language statistics...")
 
-    update_repo_list(
-        repos
-    )
+    update_languages(repos)
 
-    print("Updating languages...")
-
-    update_languages(
-        repos
-    )
-
-    print("\nGitHub profile updated successfully!")
+    print("Profile successfully updated!")
 
 
 if __name__ == "__main__":
-
     main()
