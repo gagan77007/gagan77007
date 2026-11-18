@@ -13,7 +13,6 @@ DISPLAY_NAME = "GAGAN REDDY"
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
-
 ASSETS.mkdir(exist_ok=True)
 
 CYAN = "#00F5FF"
@@ -163,7 +162,7 @@ def create_profile(user):
         21, CYAN, "bold"
     )
 
-    bio = user.get("bio") or "Developer | Technology Enthusiast"
+    bio = user.get("bio") or "Developer | Always learning and building"
 
     content += label(
         50, 91, bio[:100],
@@ -186,45 +185,7 @@ def create_profile(user):
 
 
 # ==========================================
-# TECHNOLOGY
-# ==========================================
-
-def create_technology():
-    content = svg_start(160)
-
-    content += panel(20, 12, 960, 136)
-
-    content += label(
-        50, 50,
-        "02  /  TECHNOLOGY STACK",
-        20, CYAN, "bold"
-    )
-
-    technologies = [
-        ("PYTHON", 55),
-        ("FLUTTER", 235),
-        ("DART", 415),
-        ("TYPESCRIPT", 595),
-        ("GIT", 775)
-    ]
-
-    for name, x in technologies:
-        content += f'''
-        <rect x="{x}" y="76" width="155" height="43"
-            rx="10" fill="#142747"
-            stroke="#36558B" stroke-width="1"/>
-        '''
-
-        content += centered_label(
-            x + 77, 103,
-            name, 13, WHITE, "bold"
-        )
-
-    save("technology.svg", content)
-
-
-# ==========================================
-# TERMINAL
+# DEVELOPER TERMINAL
 # ==========================================
 
 def create_terminal():
@@ -234,7 +195,7 @@ def create_terminal():
 
     content += label(
         50, 48,
-        "03  /  DEVELOPER TERMINAL",
+        "02  /  DEVELOPER TERMINAL",
         19, CYAN, "bold"
     )
 
@@ -250,7 +211,7 @@ def create_terminal():
         ("$ current_focus", "#7CFC8A"),
         ("Learning • Building • Creating", WHITE),
         ("$ status", "#7CFC8A"),
-        ("Always exploring new technologies...", PURPLE)
+        ("Always exploring new ideas...", PURPLE)
     ]
 
     for index, (value, color) in enumerate(lines):
@@ -263,7 +224,7 @@ def create_terminal():
 
 
 # ==========================================
-# PROJECT CARDS
+# AUTOMATIC PROJECT CARDS
 # ==========================================
 
 def create_projects(repos):
@@ -289,7 +250,7 @@ def create_projects(repos):
             or "A project built with curiosity and creativity."
         )
 
-        language = repo.get("language") or "Development"
+        language = repo.get("language") or "Project"
 
         filename = f"project_{index}.svg"
 
@@ -311,7 +272,7 @@ def create_projects(repos):
 
         content += label(
             40, 111,
-            f"TECH  /  {language}",
+            f"PROJECT  /  {language}",
             12, PURPLE
         )
 
@@ -386,8 +347,6 @@ def create_readme():
 
 <img src="./coding-room.gif" width="100%" alt="Coding workspace"/>
 
-<img src="./assets/technology.svg" width="100%" alt="Technology stack"/>
-
 <img src="./assets/terminal.svg" width="100%" alt="Developer terminal"/>
 
 ### FEATURED PROJECTS
@@ -402,18 +361,6 @@ def create_readme():
 
 <a href="https://github.com/{USERNAME}">
 <img src="https://img.shields.io/badge/GitHub-Profile-0B1730?style=for-the-badge&logo=github&logoColor=00F5FF"/>
-</a>
-
-<a href="https://twitter.com/">
-<img src="https://img.shields.io/badge/Twitter-Connect-0B1730?style=for-the-badge&logo=x&logoColor=00F5FF"/>
-</a>
-
-<a href="https://t.me/">
-<img src="https://img.shields.io/badge/Telegram-Connect-0B1730?style=for-the-badge&logo=telegram&logoColor=00F5FF"/>
-</a>
-
-<a href="https://instagram.com/">
-<img src="https://img.shields.io/badge/Instagram-Connect-0B1730?style=for-the-badge&logo=instagram&logoColor=00F5FF"/>
 </a>
 
 <img src="./assets/footer.svg" width="100%" alt="Footer"/>
@@ -446,11 +393,10 @@ def main():
         "?per_page=100&sort=updated"
     )
 
-    print("Creating premium profile design...")
+    print("Creating premium profile...")
 
     create_header()
     create_profile(user)
-    create_technology()
     create_terminal()
     create_projects(repos)
     create_footer()
