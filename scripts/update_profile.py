@@ -1,13 +1,12 @@
 
 import json
 import urllib.request
-import urllib.error
 from pathlib import Path
-from xml.sax.saxutils import escape
+from html import escape
 
-# --------------------------------------------------
+# ==========================================
 # SETTINGS
-# --------------------------------------------------
+# ==========================================
 
 USERNAME = "gagan77007"
 DISPLAY_NAME = "GAGAN REDDY"
@@ -21,12 +20,11 @@ CYAN = "#00F5FF"
 PURPLE = "#A78BFA"
 WHITE = "#EAFBFF"
 MUTED = "#A8B8D8"
-BG = "#07111F"
 
 
-# --------------------------------------------------
+# ==========================================
 # GITHUB API
-# --------------------------------------------------
+# ==========================================
 
 def api(url):
     request = urllib.request.Request(
@@ -37,26 +35,18 @@ def api(url):
         }
     )
 
-    try:
-        with urllib.request.urlopen(request, timeout=20) as response:
-            return json.loads(response.read().decode("utf-8"))
-
-    except urllib.error.HTTPError as error:
-        raise RuntimeError(
-            f"GitHub API error: {error.code} - {error.reason}"
-        )
-
-    except Exception as error:
-        raise RuntimeError(f"Could not fetch GitHub data: {error}")
+    with urllib.request.urlopen(request, timeout=20) as response:
+        return json.loads(response.read().decode("utf-8"))
 
 
-# --------------------------------------------------
+# ==========================================
 # SVG DESIGN HELPERS
-# --------------------------------------------------
+# ==========================================
 
 def svg_start(height):
     return f'''<svg xmlns="http://www.w3.org/2000/svg"
     width="1000" height="{height}" viewBox="0 0 1000 {height}">
+
     <defs>
         <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#07111F"/>
@@ -80,23 +70,36 @@ def svg_start(height):
     </defs>
 
     <rect width="1000" height="{height}" rx="22" fill="url(#bg)"/>
+
     <rect x="4" y="4" width="992" height="{height - 8}"
-        rx="19" fill="none" stroke="url(#border)"
-        stroke-width="2" filter="url(#glow)"/>
+        rx="19" fill="none"
+        stroke="url(#border)" stroke-width="2"
+        filter="url(#glow)"/>
     '''
 
 
 def panel(x, y, width, height):
     return f'''
     <rect x="{x}" y="{y}" width="{width}" height="{height}"
-        rx="16" fill="#0B1730" stroke="#263B68"
-        stroke-width="1.2"/>
+        rx="16" fill="#0B1730"
+        stroke="#263B68" stroke-width="1.2"/>
     '''
 
 
 def label(x, y, value, size=16, color=WHITE, weight="normal"):
     return f'''
     <text x="{x}" y="{y}" fill="{color}"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="{size}" font-weight="{weight}">
+        {escape(str(value))}
+    </text>
+    '''
+
+
+def centered_label(x, y, value, size=16, color=WHITE, weight="normal"):
+    return f'''
+    <text x="{x}" y="{y}" text-anchor="middle"
+        fill="{color}"
         font-family="JetBrains Mono, Consolas, monospace"
         font-size="{size}" font-weight="{weight}">
         {escape(str(value))}
@@ -111,9 +114,9 @@ def save(filename, content):
     )
 
 
-# --------------------------------------------------
+# ==========================================
 # HEADER
-# --------------------------------------------------
+# ==========================================
 
 def create_header():
     content = svg_start(220)
@@ -121,40 +124,34 @@ def create_header():
     content += '''
     <circle cx="500" cy="95" r="105"
         fill="#312E81" opacity="0.12"/>
+
     <circle cx="500" cy="95" r="75"
         fill="#0891B2" opacity="0.10"/>
     '''
 
-    content += label(
+    content += centered_label(
         500, 100, DISPLAY_NAME,
         48, WHITE, "bold"
-    ).replace(
-        '<text x="500"',
-        '<text text-anchor="middle" x="500"'
     )
 
-    content += label(
-        500, 139, "BUILDING  •  LEARNING  •  CREATING",
+    content += centered_label(
+        500, 139,
+        "BUILDING  •  LEARNING  •  CREATING",
         15, CYAN, "bold"
-    ).replace(
-        '<text x="500"',
-        '<text text-anchor="middle" x="500"'
     )
 
-    content += label(
-        500, 178, "DEVELOPER  /  TECHNOLOGY ENTHUSIAST",
+    content += centered_label(
+        500, 178,
+        "DEVELOPER  /  TECHNOLOGY ENTHUSIAST",
         12, MUTED
-    ).replace(
-        '<text x="500"',
-        '<text text-anchor="middle" x="500"'
     )
 
     save("header.svg", content)
 
 
-# --------------------------------------------------
+# ==========================================
 # ABOUT ME
-# --------------------------------------------------
+# ==========================================
 
 def create_profile(user):
     content = svg_start(170)
@@ -174,21 +171,23 @@ def create_profile(user):
     )
 
     content += label(
-        50, 123, "Learning • Building • Creating",
+        50, 123,
+        "Learning • Building • Creating",
         14, MUTED
     )
 
     content += label(
-        50, 146, "GITHUB.COM/GAGAN77007",
+        50, 146,
+        "GITHUB.COM/GAGAN77007",
         12, PURPLE
     )
 
     save("profile.svg", content)
 
 
-# --------------------------------------------------
+# ==========================================
 # TECHNOLOGY
-# --------------------------------------------------
+# ==========================================
 
 def create_technology():
     content = svg_start(160)
@@ -196,7 +195,8 @@ def create_technology():
     content += panel(20, 12, 960, 136)
 
     content += label(
-        50, 50, "02  /  TECHNOLOGY STACK",
+        50, 50,
+        "02  /  TECHNOLOGY STACK",
         20, CYAN, "bold"
     )
 
@@ -215,20 +215,17 @@ def create_technology():
             stroke="#36558B" stroke-width="1"/>
         '''
 
-        content += label(
-            x + 77, 103, name,
-            13, WHITE, "bold"
-        ).replace(
-            f'<text x="{x + 77}"',
-            f'<text text-anchor="middle" x="{x + 77}"'
+        content += centered_label(
+            x + 77, 103,
+            name, 13, WHITE, "bold"
         )
 
     save("technology.svg", content)
 
 
-# --------------------------------------------------
+# ==========================================
 # TERMINAL
-# --------------------------------------------------
+# ==========================================
 
 def create_terminal():
     content = svg_start(190)
@@ -236,7 +233,8 @@ def create_terminal():
     content += panel(20, 12, 960, 166)
 
     content += label(
-        50, 48, "03  /  DEVELOPER TERMINAL",
+        50, 48,
+        "03  /  DEVELOPER TERMINAL",
         19, CYAN, "bold"
     )
 
@@ -264,15 +262,18 @@ def create_terminal():
     save("terminal.svg", content)
 
 
-# --------------------------------------------------
+# ==========================================
 # PROJECT CARDS
-# --------------------------------------------------
+# ==========================================
 
 def create_projects(repos):
-    # Only public, non-fork repositories.
-    # Sort by latest update and show up to three.
+
     selected = sorted(
-        repos,
+        [
+            repo for repo in repos
+            if not repo.get("fork", False)
+            and not repo.get("private", False)
+        ],
         key=lambda repo: repo.get("updated_at", ""),
         reverse=True
     )[:3]
@@ -280,7 +281,9 @@ def create_projects(repos):
     project_links = []
 
     for index, repo in enumerate(selected, start=1):
+
         name = repo.get("name", "Project")
+
         description = (
             repo.get("description")
             or "A project built with curiosity and creativity."
@@ -291,37 +294,44 @@ def create_projects(repos):
         filename = f"project_{index}.svg"
 
         content = svg_start(150)
+
         content += panel(15, 12, 970, 126)
 
         content += label(
-            40, 49, f"0{index}  /  {name[:35]}",
+            40, 49,
+            f"0{index}  /  {name[:35]}",
             18, CYAN, "bold"
         )
 
         content += label(
-            40, 80, description[:95],
+            40, 80,
+            description[:95],
             13, WHITE
         )
 
         content += label(
-            40, 111, f"TECH  /  {language}",
+            40, 111,
+            f"TECH  /  {language}",
             12, PURPLE
         )
 
         save(filename, content)
 
-        project_url = escape(repo.get("html_url", ""), quote=True)
+        project_url = escape(
+            repo.get("html_url", ""),
+            quote=True
+        )
 
         project_links.append(
             f'<a href="{project_url}">'
-            f'<img src="./assets/{filename}" width="100%" '
-            f'alt="{escape(name, quote=True)}"/>'
+            f'<img src="./assets/{filename}" '
+            f'width="100%" alt="{escape(name, quote=True)}"/>'
             f'</a>'
         )
 
     if not selected:
         project_links.append(
-            "<p>Projects will appear here when public repositories are available.</p>"
+            "<p>No public projects found yet.</p>"
         )
 
     (ASSETS / "project_cards.html").write_text(
@@ -330,37 +340,34 @@ def create_projects(repos):
     )
 
 
-# --------------------------------------------------
+# ==========================================
 # FOOTER
-# --------------------------------------------------
+# ==========================================
 
 def create_footer():
     content = svg_start(115)
 
-    content += label(
-        500, 48, "LET'S BUILD SOMETHING GREAT",
+    content += centered_label(
+        500, 48,
+        "LET'S BUILD SOMETHING GREAT",
         19, CYAN, "bold"
-    ).replace(
-        '<text x="500"',
-        '<text text-anchor="middle" x="500"'
     )
 
-    content += label(
-        500, 78, "GITHUB  •  CONNECT  •  CREATE",
+    content += centered_label(
+        500, 78,
+        "GITHUB  •  CONNECT  •  CREATE",
         12, MUTED
-    ).replace(
-        '<text x="500"',
-        '<text text-anchor="middle" x="500"'
     )
 
     save("footer.svg", content)
 
 
-# --------------------------------------------------
+# ==========================================
 # README GENERATOR
-# --------------------------------------------------
+# ==========================================
 
 def create_readme():
+
     project_cards_path = ASSETS / "project_cards.html"
 
     project_cards = project_cards_path.read_text(
@@ -420,11 +427,12 @@ def create_readme():
     )
 
 
-# --------------------------------------------------
+# ==========================================
 # MAIN
-# --------------------------------------------------
+# ==========================================
 
 def main():
+
     print("Fetching GitHub profile...")
 
     user = api(
@@ -437,12 +445,6 @@ def main():
         f"https://api.github.com/users/{USERNAME}/repos"
         "?per_page=100&sort=updated"
     )
-
-    repos = [
-        repo for repo in repos
-        if not repo.get("fork", False)
-        and not repo.get("private", False)
-    ]
 
     print("Creating premium profile design...")
 
