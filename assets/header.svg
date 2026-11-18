@@ -1,74 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="1000" height="230"
-    viewBox="0 0 1000 230">
+    width="1000" height="220" viewBox="0 0 1000 220">
 
     <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#07111F"/>
+            <stop offset="55%" stop-color="#101B38"/>
+            <stop offset="100%" stop-color="#24164A"/>
+        </linearGradient>
 
-      <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#00F5FF"/>
-        <stop offset="50%" stop-color="#4263EB"/>
-        <stop offset="100%" stop-color="#D946EF"/>
-      </linearGradient>
+        <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00F5FF"/>
+            <stop offset="50%" stop-color="#7C3AED"/>
+            <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
 
-      <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00F5FF"/>
-        <stop offset="100%" stop-color="#D946EF"/>
-      </linearGradient>
-
-      <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#10172C"/>
-        <stop offset="100%" stop-color="#030713"/>
-      </linearGradient>
-
-      <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="2.5" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
     </defs>
 
-    <rect width="1000" height="230" fill="#030713"/>
-    
-    <text text-anchor="middle" x="500" y="35"
-      fill="#91DFFF"
-      font-size="14"
-      font-weight="normal"
-      font-family="Arial, sans-serif">
-      // DEVELOP • BUILD • INNOVATE
-    </text>
-    
-    <path d="M170 65 H215 M170 65 V115 M830 65 H785 M830 65 V115"
-      fill="none" stroke="url(#neon)" stroke-width="3"
-      filter="url(#glow)"/>
+    <rect width="1000" height="220" rx="22" fill="url(#bg)"/>
 
-    <text x="500" y="125"
-      text-anchor="middle"
-      font-size="65"
-      font-weight="bold"
-      font-family="Arial"
-      fill="url(#title)"
-      filter="url(#glow)">
-      GAGAN REDDY
-    </text>
+    <rect x="4" y="4" width="992" height="212"
+        rx="19" fill="none"
+        stroke="url(#border)" stroke-width="2"
+        filter="url(#glow)"/>
+    
+    <circle cx="500" cy="95" r="105"
+        fill="#312E81" opacity="0.12"/>
 
-    <text x="500" y="165"
-      text-anchor="middle"
-      font-size="20"
-      letter-spacing="6"
-      fill="#00F5FF"
-      font-family="Arial">
-      DEVELOPER
+    <circle cx="500" cy="95" r="75"
+        fill="#0891B2" opacity="0.10"/>
+    
+    <text x="500" y="100" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="48" font-weight="bold">
+        GAGAN REDDY
     </text>
     
-    <text text-anchor="middle" x="500" y="205"
-      fill="#B8C8E6"
-      font-size="13"
-      font-weight="normal"
-      font-family="Arial, sans-serif">
-      BUILDING IDEAS INTO REALITY  •  LEARNING EVERY DAY
+    <text x="500" y="139" text-anchor="middle"
+        fill="#00F5FF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="15" font-weight="bold">
+        BUILDING  •  LEARNING  •  CREATING
+    </text>
+    
+    <text x="500" y="178" text-anchor="middle"
+        fill="#A8B8D8"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="12" font-weight="normal">
+        DEVELOPER  /  TECHNOLOGY ENTHUSIAST
     </text>
     
 </svg>

@@ -1,230 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-    width="1000" height="150"
-    viewBox="0 0 1000 150">
+    width="1000" height="160" viewBox="0 0 1000 160">
 
     <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#07111F"/>
+            <stop offset="55%" stop-color="#101B38"/>
+            <stop offset="100%" stop-color="#24164A"/>
+        </linearGradient>
 
-      <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#00F5FF"/>
-        <stop offset="50%" stop-color="#4263EB"/>
-        <stop offset="100%" stop-color="#D946EF"/>
-      </linearGradient>
+        <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#00F5FF"/>
+            <stop offset="50%" stop-color="#7C3AED"/>
+            <stop offset="100%" stop-color="#00F5FF"/>
+        </linearGradient>
 
-      <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#00F5FF"/>
-        <stop offset="100%" stop-color="#D946EF"/>
-      </linearGradient>
-
-      <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#10172C"/>
-        <stop offset="100%" stop-color="#030713"/>
-      </linearGradient>
-
-      <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="2.5" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
     </defs>
 
-    <rect width="1000" height="150" fill="#030713"/>
+    <rect width="1000" height="160" rx="22" fill="url(#bg)"/>
+
+    <rect x="4" y="4" width="992" height="152"
+        rx="19" fill="none"
+        stroke="url(#border)" stroke-width="2"
+        filter="url(#glow)"/>
     
-    <rect x="20" y="10"
-      width="960" height="130"
-      rx="15"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
+    <rect x="20" y="12" width="960" height="136"
+        rx="16" fill="#0B1730"
+        stroke="#263B68" stroke-width="1.2"/>
     
-    <text text-anchor="middle" x="500" y="42"
-      fill="#00F5FF"
-      font-size="20"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      ✦  TECHNOLOGIES I USE
+    <text x="50" y="50" fill="#00F5FF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="20" font-weight="bold">
+        02  /  TECHNOLOGY STACK
     </text>
     
-    <rect x="43" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="110" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      PYTHON
+        <rect x="55" y="76" width="155" height="43"
+            rx="10" fill="#142747"
+            stroke="#36558B" stroke-width="1"/>
+        
+    <text x="132" y="103" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13" font-weight="bold">
+        PYTHON
     </text>
     
-    <rect x="196" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="263" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      JAVA
+        <rect x="235" y="76" width="155" height="43"
+            rx="10" fill="#142747"
+            stroke="#36558B" stroke-width="1"/>
+        
+    <text x="312" y="103" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13" font-weight="bold">
+        FLUTTER
     </text>
     
-    <rect x="349" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="416" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      JAVASCRIPT
+        <rect x="415" y="76" width="155" height="43"
+            rx="10" fill="#142747"
+            stroke="#36558B" stroke-width="1"/>
+        
+    <text x="492" y="103" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13" font-weight="bold">
+        DART
     </text>
     
-    <rect x="502" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="569" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      TYPESCRIPT
+        <rect x="595" y="76" width="155" height="43"
+            rx="10" fill="#142747"
+            stroke="#36558B" stroke-width="1"/>
+        
+    <text x="672" y="103" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13" font-weight="bold">
+        TYPESCRIPT
     </text>
     
-    <rect x="655" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="722" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      HTML
-    </text>
-    
-    <rect x="808" y="57"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="875" y="78"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      CSS
-    </text>
-    
-    <rect x="43" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="110" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      REACT
-    </text>
-    
-    <rect x="196" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="263" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      NODE.JS
-    </text>
-    
-    <rect x="349" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="416" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      GIT
-    </text>
-    
-    <rect x="502" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="569" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      GITHUB
-    </text>
-    
-    <rect x="655" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="722" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      VSCODE
-    </text>
-    
-    <rect x="808" y="96"
-      width="135" height="32"
-      rx="7"
-      fill="url(#panel)"
-      stroke="url(#neon)"
-      stroke-width="1.5"/>
-    
-    <text text-anchor="middle" x="875" y="117"
-      fill="#EAFBFF"
-      font-size="11"
-      font-weight="bold"
-      font-family="Arial, sans-serif">
-      MYSQL
+        <rect x="775" y="76" width="155" height="43"
+            rx="10" fill="#142747"
+            stroke="#36558B" stroke-width="1"/>
+        
+    <text x="852" y="103" text-anchor="middle"
+        fill="#EAFBFF"
+        font-family="JetBrains Mono, Consolas, monospace"
+        font-size="13" font-weight="bold">
+        GIT
     </text>
     
 </svg>
