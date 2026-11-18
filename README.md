@@ -10,8 +10,6 @@
 
 <img src="./coding-room.gif" width="100%" alt="Coding workspace"/>
 
-<img src="./assets/technology.svg" width="100%" alt="Technology stack"/>
-
 <img src="./assets/terminal.svg" width="100%" alt="Developer terminal"/>
 
 ### FEATURED PROJECTS
@@ -27,18 +25,6 @@
 
 <a href="https://github.com/gagan77007">
 <img src="https://img.shields.io/badge/GitHub-Profile-0B1730?style=for-the-badge&logo=github&logoColor=00F5FF"/>
-</a>
-
-<a href="https://twitter.com/">
-<img src="https://img.shields.io/badge/Twitter-Connect-0B1730?style=for-the-badge&logo=x&logoColor=00F5FF"/>
-</a>
-
-<a href="https://t.me/">
-<img src="https://img.shields.io/badge/Telegram-Connect-0B1730?style=for-the-badge&logo=telegram&logoColor=00F5FF"/>
-</a>
-
-<a href="https://instagram.com/">
-<img src="https://img.shields.io/badge/Instagram-Connect-0B1730?style=for-the-badge&logo=instagram&logoColor=00F5FF"/>
 </a>
 
 <img src="./assets/footer.svg" width="100%" alt="Footer"/>
